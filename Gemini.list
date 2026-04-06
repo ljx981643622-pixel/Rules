@@ -1,0 +1,11 @@
+DOMAIN,oauth2.googleapis.com
+DOMAIN,oauthaccountmanager.googleapis.com
+DOMAIN,push.clients6.google.com
+DOMAIN,notifications-pa.googleapis.com
+DOMAIN,proactivebackend-pa.googleapis.com
+DOMAIN,subscriptionsfirstparty-pa.googleapis.com
+DOMAIN,app-analytics-services.com
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,google.com.
