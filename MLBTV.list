@@ -1,6 +1,24 @@
-DOMAIN,ids.mlb.com
-DOMAIN,dpm.demdex.net
-DOMAIN-SUFFIX,mlbinfra.com
-DOMAIN-SUFFIX,bamgrid.com
-DOMAIN-SUFFIX,mlbstatic.com
+# --- MLB Core & Infrastructure ---
 DOMAIN-SUFFIX,mlb.com
+DOMAIN-SUFFIX,mlbstatic.com
+DOMAIN-SUFFIX,mlbinfra.com
+DOMAIN-SUFFIX,mlb.net
+
+# --- Quality of Service & Playback Authentication ---
+DOMAIN-SUFFIX,conviva.com
+DOMAIN-SUFFIX,app-analytics-services.com
+
+# --- Google / Firebase Backend (Critical for App Launch) ---
+DOMAIN-KEYWORD,firebaseinstallations
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,googlesyndication.com
+
+# --- Data & Tracking (Preventing load timeouts) ---
+DOMAIN-SUFFIX,datadoghq.com
+DOMAIN-SUFFIX,onetrust.com
+DOMAIN-SUFFIX,omtrdc.net
+DOMAIN-SUFFIX,demdex.net
+DOMAIN-SUFFIX,chartbeat.com
+DOMAIN-SUFFIX,chartbeat.net
+DOMAIN-SUFFIX,getpublica.com
