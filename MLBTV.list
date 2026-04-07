@@ -1,23 +1,24 @@
-# --- MLB 核心与架构 (必须 Proxy) ---
+# --- MLB 核心与架构 (必须代理) ---
 DOMAIN-SUFFIX,mlb.com
 DOMAIN-SUFFIX,mlbstatic.com
 DOMAIN-SUFFIX,mlbinfra.com
 DOMAIN-SUFFIX,mlb.net
 
-# --- 播放鉴权与质量监控 (解决加载转圈的关键) ---
+# --- 播放鉴权与直播流加载补丁 (解决转圈关键) ---
 DOMAIN-SUFFIX,conviva.com
 DOMAIN-SUFFIX,app-analytics-services.com
 DOMAIN-SUFFIX,getpublica.com
+DOMAIN-KEYWORD,heartbeat
 DOMAIN-SUFFIX,playback-heartbeat.mlb.com
 
-# --- Firebase 与 Google 核心支撑 (启动加载必备) ---
+# --- Firebase 与 Google 核心支撑 (启动必备) ---
 DOMAIN-KEYWORD,firebaseinstallations
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,googlevideo.com
 DOMAIN-SUFFIX,googlesyndication.com
 DOMAIN-SUFFIX,imasdk.googleapis.com
 
-# --- 追踪与数据分析 (防止请求阻塞导致的等待) ---
+# --- 追踪与数据分析 (防止超时等待) ---
 DOMAIN-SUFFIX,datadoghq.com
 DOMAIN-SUFFIX,onetrust.com
 DOMAIN-SUFFIX,omtrdc.net
