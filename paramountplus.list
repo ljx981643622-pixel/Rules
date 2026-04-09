@@ -1,11 +1,10 @@
-# Paramount+ (Including CBS Sports)
+# Paramount+
 DOMAIN-SUFFIX,paramountplus.com
+DOMAIN-SUFFIX,paramount.tech
 DOMAIN-SUFFIX,pplusstatic.com
-DOMAIN-SUFFIX,cbsaavideo.com
-DOMAIN-SUFFIX,cbsivideo.com
 DOMAIN-SUFFIX,cbsinteractive.com
 DOMAIN-SUFFIX,cbsi.com
-DOMAIN-SUFFIX,ir-paramountplus.com
-# CDN & Tracking
-DOMAIN-SUFFIX,cws.conviva.com
-DOMAIN-SUFFIX,imreas.com
+DOMAIN-SUFFIX,cbsivideo.com
+DOMAIN-SUFFIX,cbsaavideo.com
+DOMAIN-SUFFIX,theplatform.com
+DOMAIN-KEYWORD,paramount
