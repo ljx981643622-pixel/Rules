@@ -1,30 +1,10 @@
-# Paramount+ Core
-DOMAIN-SUFFIX,paramountplus.com
-DOMAIN-SUFFIX,pplusstatic.com
-DOMAIN-SUFFIX,paramount.tech
-DOMAIN-KEYWORD,paramount
-
-# CBS & Authentication
-DOMAIN-SUFFIX,cbsinteractive.com
+DOMAIN,cbsi.live.ott.irdeto.com
+DOMAIN,cbsplaylistserver.aws.syncbak.com
+DOMAIN,cbsservice.aws.syncbak.com
+DOMAIN,link.theplatform.com
+DOMAIN-SUFFIX,cbsaavideo.com
 DOMAIN-SUFFIX,cbsi.com
 DOMAIN-SUFFIX,cbsivideo.com
-DOMAIN-SUFFIX,cbsaavideo.com
-DOMAIN-SUFFIX,cbssports.com
-
-# DRM & Licensing (Fix Error 5419)
-DOMAIN-SUFFIX,irdeto.com
-DOMAIN-SUFFIX,omtrdc.net
-DOMAIN-SUFFIX,conviva.com
-DOMAIN-SUFFIX,nmrodam.com
-DOMAIN-SUFFIX,theplatform.com
-
-# Analytics & Ads (Required)
-DOMAIN-SUFFIX,doubleclick.net
-DOMAIN-SUFFIX,scorecardresearch.com
-DOMAIN-SUFFIX,newrelic.com
-DOMAIN-SUFFIX,kochava.com
-
-# Keywords
-DOMAIN-KEYWORD,pplus
-DOMAIN-KEYWORD,vod-pplus
-DOMAIN-KEYWORD,cbsi
+DOMAIN-SUFFIX,paramountplus.com
+DOMAIN-SUFFIX,pplusstatic.com
+USER-AGENT,PPlus*
