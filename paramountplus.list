@@ -1,10 +1,18 @@
-# Paramount+
+# Paramount+ 核心与版权验证
 DOMAIN-SUFFIX,paramountplus.com
 DOMAIN-SUFFIX,paramount.tech
 DOMAIN-SUFFIX,pplusstatic.com
 DOMAIN-SUFFIX,cbsinteractive.com
 DOMAIN-SUFFIX,cbsi.com
-DOMAIN-SUFFIX,cbsivideo.com
 DOMAIN-SUFFIX,cbsaavideo.com
-DOMAIN-SUFFIX,theplatform.com
+
+# 关键版权管理 (DRM) 与 验证 (必须补充)
+DOMAIN-SUFFIX,irdeto.com
+DOMAIN-SUFFIX,nmrodam.com
+DOMAIN-SUFFIX,omtrdc.net
+DOMAIN-SUFFIX,conviva.com
+DOMAIN-SUFFIX,kochava.com
+
+# 针对数据库捕获的具体特征域名
+DOMAIN-KEYWORD,pplus
 DOMAIN-KEYWORD,paramount
