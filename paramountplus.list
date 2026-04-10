@@ -1,29 +1,25 @@
-# --- Core & UI ---
 domain-suffix,paramountplus.com
 domain-suffix,pplusstatic.com
 domain-suffix,viacomcbs.com
-
-# --- Video & CDN ---
 domain-suffix,cbsivideo.com
 domain-suffix,cbsig.net
 domain-suffix,irdeto.com
-
-# --- Verification & Geo-Fencing ---
 domain-suffix,conviva.com
 domain-suffix,omtrdc.net
 domain-suffix,adobedc.net
 domain-suffix,scorecardresearch.com
-
-# --- Tracking & Analytics ---
 domain-suffix,braze.com
 domain-suffix,kochava.com
 domain-suffix,newrelic.com
 domain-suffix,demdex.net
 domain-suffix,tiqcdn.com
-domain-suffix,onetrust.io
-
-# --- Third-party ---
+domain-suffix,onetrust.io 
 domain-suffix,doubleclick.net
 domain-suffix,googlesyndication.com
 domain-suffix,branch.io
+domain-suffix,cbs.com
+domain-suffix,cbsnews.com
+domain-suffix,cbslocal.com
+domain-suffix,theplatform.com
+domain,pubads.g.doubleclick.net
 domain-suffix,googleapis.com
