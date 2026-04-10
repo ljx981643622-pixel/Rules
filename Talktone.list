@@ -1,12 +1,35 @@
-DOMAIN-SUFFIX,tktn.be,PROXY
-DOMAIN-SUFFIX,talkatone.com,PROXY
-DOMAIN-KEYWORD,talkme,PROXY
-DOMAIN-SUFFIX,apple.com,PROXY
-DOMAIN-SUFFIX,googleapis.com,PROXY
-IP-CIDR,192.199.240.0/24,PROXY
-IP-CIDR,50.117.27.0/24,PROXY
-IP-CIDR,63.251.124.0/24,PROXY
-DEST-PORT,5222,PROXY
-DEST-PORT,8443,PROXY
-DEST-PORT,5060,PROXY
-DEST-PORT,5061,PROXY
+# --- Talkatone 官方核心域名 ---
+DOMAIN-SUFFIX,talkatone.com
+DOMAIN-SUFFIX,tktn.at
+DOMAIN-SUFFIX,tktn.be
+
+# --- 第三方认证与功能支持 ---
+# Tenor 用于 GIF 搜索，Cohere 和 Agkn 用于登录验证
+DOMAIN-SUFFIX,tenor.com
+DOMAIN-SUFFIX,agkn.com
+DOMAIN-SUFFIX,cohere.com
+DOMAIN-SUFFIX,inmobi.com
+
+# --- 关键：地理位置与 IP 归属地检测 ---
+# Talkatone 会通过以下 API 确认你是否在海外，必须走代理
+DOMAIN-KEYWORD,ip-api
+DOMAIN-SUFFIX,ipstack.com
+DOMAIN-SUFFIX,maxmind.com
+DOMAIN-SUFFIX,ident.me
+DOMAIN-SUFFIX,whatismyip.com
+
+# --- 数据统计与报错 (不通可能卡启动) ---
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN-SUFFIX,googlesyndication.com
+
+# --- 用户代理拦截 (小火箭/Loon/Surge 专用) ---
+USER-AGENT,Talkatone*
+
+# --- 底层语音通讯服务器 (VoIP/STUN/UDP) ---
+# 这些是 Talkatone 在美国常用的机房 IP 段，直接加上可以极大提升通话成功率
+IP-CIDR,50.117.27.0/24,no-resolve
+IP-CIDR,69.46.241.0/24,no-resolve
+IP-CIDR,205.164.56.0/24,no-resolve
+IP-CIDR,63.251.124.0/24,no-resolve
