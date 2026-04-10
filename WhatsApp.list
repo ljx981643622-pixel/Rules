@@ -1,0 +1,28 @@
+# --- WhatsApp 核心域名 ---
+domain-suffix,whatsapp.com
+domain-suffix,whatsapp.net
+
+# --- 媒体、图片与视频 CDN (Facebook 体系) ---
+# WhatsApp 的媒体传输高度依赖这些 CDN 域名
+domain-suffix,fbcdn.net
+domain-suffix,cdninstagram.com
+domain-suffix,messenger.com
+
+# --- 语音与视频通话 (VoIP) 验证与统计 ---
+domain-suffix,facebook.com
+domain-suffix,facebook.net
+domain-suffix,tfbnw.net
+
+# --- WhatsApp 常用服务器 IP 段 (针对通话优化) ---
+# 包含 WhatsApp 官方分配的多个数据中心 IP 段，确保通话不卡顿
+ip-cidr,18.194.0.0/15,no-resolve
+ip-cidr,34.224.0.0/12,no-resolve
+ip-cidr,54.160.0.0/12,no-resolve
+ip-cidr,108.177.0.0/16,no-resolve
+ip-cidr,157.240.0.0/16,no-resolve
+ip-cidr,173.252.0.0/16,no-resolve
+ip-cidr,204.15.20.0/22,no-resolve
+ip-cidr,31.13.24.0/21,no-resolve
+ip-cidr,129.134.0.0/17,no-resolve
+ip-cidr,179.60.192.0/22,no-resolve
+ip-cidr,185.60.216.0/22,no-resolve
