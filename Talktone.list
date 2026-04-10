@@ -1,35 +1,44 @@
-# --- Talkatone 官方核心域名 ---
+# --- [Talkatone Official Domains] ---
 DOMAIN-SUFFIX,talkatone.com
 DOMAIN-SUFFIX,tktn.at
 DOMAIN-SUFFIX,tktn.be
 
-# --- 第三方认证与功能支持 ---
-# Tenor 用于 GIF 搜索，Cohere 和 Agkn 用于登录验证
+# --- [Authentication & Third-party Services] ---
+# 包含登录验证、GIF 搜索和基础架构
 DOMAIN-SUFFIX,tenor.com
 DOMAIN-SUFFIX,agkn.com
 DOMAIN-SUFFIX,cohere.com
 DOMAIN-SUFFIX,inmobi.com
+DOMAIN-SUFFIX,nexage.com
+DOMAIN-SUFFIX,rubiconproject.com
 
-# --- 关键：地理位置与 IP 归属地检测 ---
-# Talkatone 会通过以下 API 确认你是否在海外，必须走代理
+# --- [Crucial: Geo-Location & Environment Check] ---
+# Talkatone 通过这些接口识别人在不在深圳，必须强制走代理
 DOMAIN-KEYWORD,ip-api
 DOMAIN-SUFFIX,ipstack.com
 DOMAIN-SUFFIX,maxmind.com
 DOMAIN-SUFFIX,ident.me
 DOMAIN-SUFFIX,whatismyip.com
+DOMAIN-SUFFIX,api.segment.io
 
-# --- 数据统计与报错 (不通可能卡启动) ---
+# --- [Analytics & Crash Logs] ---
+# 如果这些请求被拦截，App 有时会故意卡在启动页面
 DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,doubleclick.net
 DOMAIN-SUFFIX,google-analytics.com
 DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,app-measurement.com
 
-# --- 用户代理拦截 (小火箭/Loon/Surge 专用) ---
+# --- [User-Agent Rule] ---
+# 覆盖所有以 Talkatone 标识发出的流量
 USER-AGENT,Talkatone*
 
-# --- 底层语音通讯服务器 (VoIP/STUN/UDP) ---
-# 这些是 Talkatone 在美国常用的机房 IP 段，直接加上可以极大提升通话成功率
+# --- [Fixed IP CIDR - VoIP/STUN/Media] ---
+# 这是最核心的：Talkatone 的语音流会直连这些机房，如果不加，分流必定失败
+# 必须带上 no-resolve，强制远程解析
 IP-CIDR,50.117.27.0/24,no-resolve
 IP-CIDR,69.46.241.0/24,no-resolve
 IP-CIDR,205.164.56.0/24,no-resolve
 IP-CIDR,63.251.124.0/24,no-resolve
+IP-CIDR,66.54.140.0/24,no-resolve
+IP-CIDR,208.122.32.0/24,no-resolve
