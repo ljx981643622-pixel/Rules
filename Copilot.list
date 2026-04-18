@@ -1,0 +1,31 @@
+# Copilot 核心
+DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,copilot-api.microsoft.com
+DOMAIN-SUFFIX,copilot.microsoft365.com
+
+# Bing（Copilot 依赖）
+DOMAIN-SUFFIX,bing.com
+DOMAIN-SUFFIX,www.bing.com
+DOMAIN-SUFFIX,cn.bing.com
+DOMAIN-SUFFIX,bingapis.com
+DOMAIN-SUFFIX,api.bing.com
+
+# Microsoft 登录（Copilot 必需）
+DOMAIN-SUFFIX,login.live.com
+DOMAIN-SUFFIX,login.microsoftonline.com
+DOMAIN-SUFFIX,login.microsoft.com
+DOMAIN-SUFFIX,account.microsoft.com
+
+# Microsoft API（Copilot 后端依赖）
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,microsoftonline.com
+DOMAIN-SUFFIX,msft.com
+DOMAIN-SUFFIX,msauth.net
+DOMAIN-SUFFIX,msauthimages.net
+DOMAIN-SUFFIX,msftauth.net
+DOMAIN-SUFFIX,msftauthimages.net
+DOMAIN-SUFFIX,msidentity.com
+
+# Edge / 浏览器相关（Copilot Web 端会调用）
+DOMAIN-SUFFIX,msedge.net
+DOMAIN-SUFFIX,edge.microsoft.com
