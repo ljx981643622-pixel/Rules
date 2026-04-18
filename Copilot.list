@@ -1,31 +1,48 @@
-# Copilot 核心
-DOMAIN-SUFFIX,copilot.microsoft.com
-DOMAIN-SUFFIX,copilot-api.microsoft.com
-DOMAIN-SUFFIX,copilot.microsoft365.com
+# —— M365 Copilot 核心服务 ——
+DOMAIN-SUFFIX,office.com
+DOMAIN-SUFFIX,office365.com
+DOMAIN-SUFFIX,microsoft365.com
+DOMAIN-SUFFIX,cdn.office.net
+DOMAIN-SUFFIX,officecdn.microsoft.com
 
-# Bing（Copilot 依赖）
-DOMAIN-SUFFIX,bing.com
-DOMAIN-SUFFIX,www.bing.com
-DOMAIN-SUFFIX,cn.bing.com
-DOMAIN-SUFFIX,bingapis.com
-DOMAIN-SUFFIX,api.bing.com
+# —— Graph API（M365 Copilot 的大脑） ——
+DOMAIN-SUFFIX,graph.microsoft.com
+DOMAIN-SUFFIX,graph.microsoft.us
+DOMAIN-SUFFIX,graph.windows.net
 
-# Microsoft 登录（Copilot 必需）
-DOMAIN-SUFFIX,login.live.com
+# —— OneDrive / SharePoint（M365 Copilot 读取文件必需） ——
+DOMAIN-SUFFIX,sharepoint.com
+DOMAIN-SUFFIX,sharepoint-df.com
+DOMAIN-SUFFIX,sharepointonline.com
+DOMAIN-SUFFIX,onedrive.com
+DOMAIN-SUFFIX,onedrive.live.com
+DOMAIN-SUFFIX,files.1drv.com
+
+# —— Outlook / Exchange（M365 Copilot 读取邮件必需） ——
+DOMAIN-SUFFIX,outlook.com
+DOMAIN-SUFFIX,outlook.office.com
+DOMAIN-SUFFIX,office365.com
+DOMAIN-SUFFIX,exchange.com
+DOMAIN-SUFFIX,exchangeonline.com
+DOMAIN-SUFFIX,protection.outlook.com
+
+# —— Teams（M365 Copilot 读取会议记录必需） ——
+DOMAIN-SUFFIX,teams.microsoft.com
+DOMAIN-SUFFIX,teams.live.com
+DOMAIN-SUFFIX,skype.com
+
+# —— Microsoft 身份验证（M365 Copilot 必需） ——
 DOMAIN-SUFFIX,login.microsoftonline.com
 DOMAIN-SUFFIX,login.microsoft.com
+DOMAIN-SUFFIX,login.live.com
 DOMAIN-SUFFIX,account.microsoft.com
-
-# Microsoft API（Copilot 后端依赖）
-DOMAIN-SUFFIX,microsoft.com
-DOMAIN-SUFFIX,microsoftonline.com
-DOMAIN-SUFFIX,msft.com
 DOMAIN-SUFFIX,msauth.net
 DOMAIN-SUFFIX,msauthimages.net
 DOMAIN-SUFFIX,msftauth.net
 DOMAIN-SUFFIX,msftauthimages.net
 DOMAIN-SUFFIX,msidentity.com
 
-# Edge / 浏览器相关（Copilot Web 端会调用）
-DOMAIN-SUFFIX,msedge.net
-DOMAIN-SUFFIX,edge.microsoft.com
+# —— Microsoft 主域（M365 Copilot 后端依赖） ——
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,microsoftonline.com
+DOMAIN-SUFFIX,msft.com
