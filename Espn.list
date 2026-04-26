@@ -1,0 +1,34 @@
+# ESPN 核心域名
+DOMAIN-SUFFIX,espn.com
+DOMAIN-SUFFIX,espncdn.com
+DOMAIN-SUFFIX,espn.net
+DOMAIN-SUFFIX,espn.hb-api.omtrdc.net
+DOMAIN-SUFFIX,tredir.espn.com
+DOMAIN-SUFFIX,stitcher.espn.com
+
+# ESPN 流媒体及流控后台 (BAMGrid/Disney)
+DOMAIN-SUFFIX,bamgrid.com
+DOMAIN-SUFFIX,dssott.com
+DOMAIN-SUFFIX,edge.bamgrid.com
+DOMAIN-SUFFIX,playback.svcs.plus.espn.com
+
+# 关键 API 与 认证
+DOMAIN-SUFFIX,api.espn.com
+DOMAIN-SUFFIX,watch.product.api.espn.com
+DOMAIN-SUFFIX,watch.auth.api.espn.com
+DOMAIN-SUFFIX,watch.graph.api.espn.com
+DOMAIN-SUFFIX,affiliate.api.espn.com
+DOMAIN-SUFFIX,artwork.api.espn.com
+DOMAIN-SUFFIX,secure.espn.com
+DOMAIN-SUFFIX,pinpoint.espn.com
+
+# 支撑与统计 (从日志提取的强关联域名)
+DOMAIN-SUFFIX,onetrust.com
+DOMAIN-SUFFIX,onetrust.io
+DOMAIN-SUFFIX,conviva.com
+DOMAIN-SUFFIX,newrelic.com
+DOMAIN-SUFFIX,scorecardresearch.com
+DOMAIN-SUFFIX,imrworldwide.com
+
+# 关键字匹配
+DOMAIN-KEYWORD,espn
