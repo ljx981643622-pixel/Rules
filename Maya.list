@@ -1,0 +1,16 @@
+payload:
+  # Core API & Main Domain
+  - DOMAIN-SUFFIX,maya.ph
+  - DOMAIN-SUFFIX,paymaya.com
+  - DOMAIN-SUFFIX,voyagerapis.com
+
+  # Security & Risk Control
+  - DOMAIN-SUFFIX,sendbird.com
+  - DOMAIN-SUFFIX,appdome.com
+  - DOMAIN-SUFFIX,shield.com
+  - DOMAIN-SUFFIX,csftr.com
+
+  # Analytics
+  - DOMAIN-SUFFIX,clevertap-prod.com
+  - DOMAIN-SUFFIX,appsflyer.com
+  - DOMAIN-SUFFIX,appsflyersdk.com
