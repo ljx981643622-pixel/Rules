@@ -1,0 +1,11 @@
+# === Prime Video & Amazon Video ===
+payload:
+  - DOMAIN-SUFFIX,amazonvideo.com
+  - DOMAIN-SUFFIX,primevideo.com
+  - DOMAIN-SUFFIX,atv-ext.amazon.com
+  - DOMAIN-SUFFIX,media-amazon.com
+  - DOMAIN-SUFFIX,a2z.com
+  - DOMAIN-SUFFIX,minerva.devices.a2z.com
+  - DOMAIN-SUFFIX,video.a2z.com
+  - DOMAIN-KEYWORD,amazonvideo
+  - DOMAIN-KEYWORD,primevideo
