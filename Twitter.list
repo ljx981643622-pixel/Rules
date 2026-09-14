@@ -1,0 +1,41 @@
+[Rule]
+# === X / Twitter 核心域名与品牌变更 ===
+DOMAIN-SUFFIX,twitter.com,PROXY
+DOMAIN-SUFFIX,x.com,PROXY
+DOMAIN-SUFFIX,twimg.com,PROXY
+DOMAIN-SUFFIX,t.co,PROXY
+DOMAIN-SUFFIX,twttr.com,PROXY
+
+# === 官方功能与子服务 ===
+DOMAIN-SUFFIX,tweetdeck.com,PROXY
+DOMAIN-SUFFIX,periscope.tv,PROXY
+DOMAIN-SUFFIX,pscp.tv,PROXY
+DOMAIN-SUFFIX,twtrdns.net,PROXY
+DOMAIN-SUFFIX,twttr.net,PROXY
+DOMAIN-SUFFIX,vine.co,PROXY
+
+# === 核心子域名精确匹配（对应抓包中的 API 与 CDN） ===
+DOMAIN,abs.twimg.com,PROXY
+DOMAIN,api.twitter.com,PROXY
+DOMAIN,api.x.com,PROXY
+DOMAIN,api-stream.twitter.com,PROXY
+DOMAIN,ads-api.twitter.com,PROXY
+DOMAIN,pbs.twimg.com,PROXY
+DOMAIN,video.twimg.com,PROXY
+DOMAIN,ton.twitter.com,PROXY
+DOMAIN,upload.twitter.com,PROXY
+DOMAIN,mobile.twitter.com,PROXY
+DOMAIN,probe.twitter.com,PROXY
+
+# === 关键词兜底 ===
+DOMAIN-KEYWORD,twitter,PROXY
+
+# === X / Twitter 官方自主系统与 IP 网段（ASN 13414） ===
+IP-CIDR,199.16.156.0/22,PROXY,no-resolve
+IP-CIDR,199.59.148.0/22,PROXY,no-resolve
+IP-CIDR,199.96.56.0/21,PROXY,no-resolve
+IP-CIDR,192.133.76.0/22,PROXY,no-resolve
+IP-CIDR,104.244.42.0/21,PROXY,no-resolve
+IP-CIDR,209.237.192.0/19,PROXY,no-resolve
+IP-CIDR6,2803:2180::/32,PROXY,no-resolve
+IP-CIDR6,2a04:4e40::/32,PROXY,no-resolve
