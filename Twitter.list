@@ -1,41 +1,61 @@
+[General]
+bypass-system = true
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local
+tun-excluded-routes = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.18.0.0/15, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
+dns-server = system, 223.5.5.5, 119.29.29.29
+ipv6 = false
+
+[Proxy Group]
+# 1. 核心分流组：Twitter 专用策略组（自动筛选名称包含“港/HK/Hong Kong”的节点，匹配不到时回落到 PROXY）
+Twitter-HK = select, policy-regex-filter=(?i)港|hk|hongkong, PROXY
+
+# 2. 全局通用代理策略组（通常用于手动切换主节点，如日本、美国等）
+PROXY = select, policy-regex-filter=.*
+
 [Rule]
-# === X / Twitter 核心域名与品牌变更 ===
-DOMAIN-SUFFIX,twitter.com,PROXY
-DOMAIN-SUFFIX,x.com,PROXY
-DOMAIN-SUFFIX,twimg.com,PROXY
-DOMAIN-SUFFIX,t.co,PROXY
-DOMAIN-SUFFIX,twttr.com,PROXY
+# ========================
+# 1. Twitter / X 专属分流（最高优先级，全部固定指向 Twitter-HK）
+# ========================
+# 远程全量规则集
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Twitter/Twitter.list,Twitter-HK
 
-# === 官方功能与子服务 ===
-DOMAIN-SUFFIX,tweetdeck.com,PROXY
-DOMAIN-SUFFIX,periscope.tv,PROXY
-DOMAIN-SUFFIX,pscp.tv,PROXY
-DOMAIN-SUFFIX,twtrdns.net,PROXY
-DOMAIN-SUFFIX,twttr.net,PROXY
-DOMAIN-SUFFIX,vine.co,PROXY
+# 核心域名与品牌后缀
+DOMAIN-SUFFIX,x.com,Twitter-HK
+DOMAIN-SUFFIX,twitter.com,Twitter-HK
+DOMAIN-SUFFIX,twimg.com,Twitter-HK
+DOMAIN-SUFFIX,t.co,Twitter-HK
+DOMAIN-SUFFIX,twttr.com,Twitter-HK
+DOMAIN-SUFFIX,tweetdeck.com,Twitter-HK
+DOMAIN-SUFFIX,periscope.tv,Twitter-HK
+DOMAIN-KEYWORD,twitter,Twitter-HK
 
-# === 核心子域名精确匹配（对应抓包中的 API 与 CDN） ===
-DOMAIN,abs.twimg.com,PROXY
-DOMAIN,api.twitter.com,PROXY
-DOMAIN,api.x.com,PROXY
-DOMAIN,api-stream.twitter.com,PROXY
-DOMAIN,ads-api.twitter.com,PROXY
-DOMAIN,pbs.twimg.com,PROXY
-DOMAIN,video.twimg.com,PROXY
-DOMAIN,ton.twitter.com,PROXY
-DOMAIN,upload.twitter.com,PROXY
-DOMAIN,mobile.twitter.com,PROXY
-DOMAIN,probe.twitter.com,PROXY
+# 核心子域名精确匹配（API与流媒体CDN）
+DOMAIN,abs.twimg.com,Twitter-HK
+DOMAIN,api.twitter.com,Twitter-HK
+DOMAIN,api.x.com,Twitter-HK
+DOMAIN,api-stream.twitter.com,Twitter-HK
+DOMAIN,ads-api.twitter.com,Twitter-HK
+DOMAIN,pbs.twimg.com,Twitter-HK
+DOMAIN,video.twimg.com,Twitter-HK
 
-# === 关键词兜底 ===
-DOMAIN-KEYWORD,twitter,PROXY
+# X / Twitter 官方自主系统 IP 段（ASN 13414）
+IP-CIDR,104.244.42.0/21,Twitter-HK,no-resolve
+IP-CIDR,199.16.156.0/22,Twitter-HK,no-resolve
+IP-CIDR,199.59.148.0/22,Twitter-HK,no-resolve
+IP-CIDR,199.96.56.0/21,Twitter-HK,no-resolve
+IP-CIDR,192.133.76.0/22,Twitter-HK,no-resolve
+IP-CIDR,209.237.192.0/19,Twitter-HK,no-resolve
 
-# === X / Twitter 官方自主系统与 IP 网段（ASN 13414） ===
-IP-CIDR,199.16.156.0/22,PROXY,no-resolve
-IP-CIDR,199.59.148.0/22,PROXY,no-resolve
-IP-CIDR,199.96.56.0/21,PROXY,no-resolve
-IP-CIDR,192.133.76.0/22,PROXY,no-resolve
-IP-CIDR,104.244.42.0/21,PROXY,no-resolve
-IP-CIDR,209.237.192.0/19,PROXY,no-resolve
-IP-CIDR6,2803:2180::/32,PROXY,no-resolve
-IP-CIDR6,2a04:4e40::/32,PROXY,no-resolve
+# ========================
+# 2. 局域网与国内直连规则
+# ========================
+DOMAIN-KEYWORD,lan,DIRECT
+GEOIP,CN,DIRECT
+
+# ========================
+# 3. 兜底规则（其余未匹配的境外流量走主界面的 PROXY）
+# ========================
+FINAL,PROXY
+
+[Host]
+localhost = 127.0.0.1
